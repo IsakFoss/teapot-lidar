@@ -28,7 +28,7 @@ class PcapReader:
 
         self.source = pcap.Pcap(pcap_path, self.metadata)
 
-        self.channels = [c for c in client.ChanField]
+        self.channels = [c for c in client.ChanField.values]
 
         # If 0, every frame will be read. If 1, every second frame, etc.
         self.skip_frames = skip_frames
